@@ -4,9 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { Provider } from 'react-redux';
+import { legacy_createStore } from 'redux';
+import reducers from './redux/reducers';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const store = legacy_createStore(reducers)
+
 root.render(
-  <App />
+  <Provider store={store}>
+    <App />
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

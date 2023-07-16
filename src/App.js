@@ -1,10 +1,11 @@
-import Products from "./components/Products";
+import Home from './pages/Home';
+import './App.css'
 function App() {
 
 
   return (
-    <div className="App" style={{ padding: 20 }}>
-      <Products />
+    <div className="App" >
+      <Home />
     </div>
   );
 
